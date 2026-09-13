@@ -1,0 +1,18 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Production build outputs
+dist
+.output
+
+# Local Netlify folder
+.netlify
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Deno & runtime caches
+deno.lock

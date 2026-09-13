@@ -13,7 +13,31 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'AI Chat',
+        title: '✨ Nova AI Voice Assistant | নোভা এআই ভয়েস অ্যাসিস্ট্যান্ট',
+      },
+      {
+        name: 'description',
+        content:
+          'Nova AI Voice Assistant - কথা বলুন ও শুনুন বাংলায় এবং ইংরেজিতে বুদ্ধিমত্তাসম্পন্ন কৃত্রিম সহকারী।',
+      },
+      {
+        name: 'theme-color',
+        content: '#0f172a',
+      },
+    ],
+    links: [
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossOrigin: 'anonymous',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap',
       },
     ],
   }),
@@ -22,11 +46,11 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="bn" className="dark">
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="bg-[#0b0f19] text-slate-100 antialiased selection:bg-sky-500/30 selection:text-sky-200">
         {children}
         <Scripts />
       </body>
