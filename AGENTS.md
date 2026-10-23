@@ -28,7 +28,10 @@ A general-purpose AI chat assistant. Users type a message and get a streamed, ma
 │   ├── routes
 │   │   ├── __root.tsx         # Root layout: HTML shell, page metadata, global styles
 │   │   ├── api.chat.ts        # POST handler for /api/chat: picks an AI provider, streams the response as SSE
-│   │   └── index.tsx          # Home route: chat UI (message list, input form, send/stop, Streamdown markdown rendering)
+│   │   ├── chat.tsx           # /chat route: chat UI (message list, input form, send/stop, Streamdown markdown rendering)
+│   │   └── index.tsx          # Home route: Siddiq Status Studio (Bengali status picker, card preview, copy, PNG download)
+│   ├── styles
+│   │   └── status-studio.css  # Scoped styles for the Status Studio page
 │   ├── router.tsx             # TanStack Router setup
 │   └── styles.css             # Tailwind imports + chat/markdown styling
 ├── netlify.toml                # Netlify build command, publish directory, dev server settings
@@ -43,7 +46,8 @@ A general-purpose AI chat assistant. Users type a message and get a streamed, ma
 
 Routes are defined by files in `src/routes/`:
 - `__root.tsx` — root layout wrapping all pages
-- `index.tsx` — route for `/`
+- `index.tsx` — route for `/` (Status Studio)
+- `chat.tsx` — route for `/chat`
 - `api.chat.ts` — server API endpoint for `/api/chat`
 
 ### AI Integration (`src/routes/api.chat.ts`)
@@ -57,9 +61,9 @@ The chat endpoint picks the first available provider based on which API key is s
 
 Responses stream back to the client as Server-Sent Events via `toServerSentEventsResponse`.
 
-### Chat UI (`src/routes/index.tsx`, `src/lib/ai-hook.ts`)
+### Chat UI (`src/routes/chat.tsx`, `src/lib/ai-hook.ts`)
 
-`useAIChat` (in `src/lib/ai-hook.ts`) manages message state and streaming via `@tanstack/ai-react`. `index.tsx` renders the message list (with `Streamdown` for markdown) and the input form, and can stop an in-flight response.
+`useAIChat` (in `src/lib/ai-hook.ts`) manages message state and streaming via `@tanstack/ai-react`. `chat.tsx` renders the message list (with `Streamdown` for markdown) and the input form, and can stop an in-flight response.
 
 ## Configuration Files
 

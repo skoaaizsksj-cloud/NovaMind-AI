@@ -1,0 +1,126 @@
+.studio {
+  min-height: 100vh;
+  background: #080808;
+  color: #fff;
+  font-family: 'Noto Sans Bengali', system-ui, sans-serif;
+}
+.studio *,
+.studio *::before,
+.studio *::after {
+  box-sizing: border-box;
+}
+.studio header {
+  text-align: center;
+  padding: 25px 14px;
+  background: linear-gradient(140deg, #241019, #101010);
+}
+.studio h1 {
+  margin: 0;
+  color: #ff5277;
+  font-size: 27px;
+  font-weight: 700;
+}
+.studio header p {
+  color: #ccc;
+  margin: 1em 0 0;
+}
+.studio main {
+  max-width: 700px;
+  margin: auto;
+  padding: 16px;
+}
+.studio h2 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 1em 0 0.8em;
+}
+.studio button {
+  background: #ff426c;
+  color: white;
+  border: 0;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.studio .tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.studio .tabs button {
+  flex: 1;
+  min-width: 100px;
+}
+.studio .tabs button.active {
+  outline: 2px solid #ffb3c4;
+  outline-offset: 2px;
+}
+.studio .secondary {
+  background: #292929;
+}
+.studio textarea,
+.studio select {
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0 12px;
+  background: #171717;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.studio .card {
+  min-height: 240px;
+  padding: 28px 18px;
+  border: 1px solid #38222a;
+  border-radius: 16px;
+  background: radial-gradient(ellipse at top, #31121f, #090909 75%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+.studio .preview {
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.studio .brand {
+  color: #ff7290;
+  font-size: 13px;
+}
+.studio .actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.studio .actions button {
+  flex: 1;
+}
+.studio .status-list {
+  display: grid;
+  gap: 9px;
+}
+.studio .item {
+  padding: 13px;
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 10px;
+  line-height: 1.8;
+}
+.studio .item button {
+  margin-top: 8px;
+}
+.studio .message {
+  margin: 1em 0;
+}
+.studio footer {
+  text-align: center;
+  padding: 22px;
+  color: #888;
+  font-size: 13px;
+}
